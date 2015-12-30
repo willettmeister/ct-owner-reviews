@@ -101,6 +101,10 @@ $blue: rgb(77,136,219);
   font-weight: bold;
   color: $burgundy;
   margin-bottom: 3px;
+  a {
+    color: $burgundy;
+    text-decoration: none;    
+  }
 }
 
 .page-section-heading {
