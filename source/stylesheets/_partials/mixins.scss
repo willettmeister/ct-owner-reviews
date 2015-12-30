@@ -1,0 +1,57 @@
+// Site-wide mixins
+
+  // border radius
+  // defaults to 0.5em
+  @mixin border-radius($radius: 0.5em) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+  }
+
+  // transition
+  // defaults to all, 0.3 seconds, cubic-bezier
+  @mixin transition($property: all, $speed: 0.5s, $effect: cubic-bezier(.10, .10, .25, .90), $delay: 0s) {
+    -webkit-transition: $property $speed $effect;
+    -moz-transition: $property $speed $effect;
+    -o-transition: $property $speed $effect;
+    transition: $property $speed $effect;
+  }
+
+  // box shadow
+  @mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+  }
+
+  // two box shadows
+  @mixin two-box-shadows($value1, $value2) {
+    -webkit-box-shadow: $value1, $value2;
+    -moz-box-shadow: $value1, $value2;
+    box-shadow: $value1, $value2;
+  }
+
+  // change the box model
+  // defaults to border-box
+  // thus: border & padding cut into width
+  @mixin box-sizing($property: border-box) {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  // linear gradient
+  @mixin gradient($from: #eee, $to: #dedede) {
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top,  $from 0%,$to 100%); /* Chrome10+,Safari5.1+ */
+    background-image: -moz-linear-gradient(top,  $from, $to); /* FF 3.6+ */
+    background-image: -o-linear-gradient(top,  $from 0%,$to 100%); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(top,  $from 0%,$to 100%); /* IE10+ */
+    background-image: linear-gradient(to bottom,  $from 0%,$to 100%); /* W3C */
+  }
+
+  // font size
+  @mixin font-size($sizeValue){
+    font-size: $sizeValue + px;
+    font-size: $sizeValue / $remBase + rem;
+  }

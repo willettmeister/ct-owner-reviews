@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:og="http://ogp.me/ns#">
+
+  <head profile="http://www.w3.org/1999/xhtml/vocab">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%= "Car Talk | " + current_page.data.title || "Car Talk" %></title>
+    <%= stylesheet_link_tag "styles" %>
+    <link rel="shortcut icon" href="http://cartalk.local:8888/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <%= javascript_include_tag  "scripts" %>
+    <%= favicon_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
+  </head>
+  
+  <body class="<%= page_classes %>">
+
+    <div id="site-header">
+      <%= partial "layouts/header" %>
+    </div>
+
+    <div id="site-main" role="main">
+      <div id="main-section">
+
+        <div class="inner">
+
+          <div class="row">
+            <div class="col-md-8">
+
+              <div class="page-header">
+                <div class="page-header-inner table-row">
+                  <div class="page-header-inner-cell page-header-inner-cell-left table-cell">
+                    <h1 class="page-header-heading">
+                      Owner Reviews
+                    </h1>
+                  </div>
+                  <div class="page-header-inner-cell page-header-inner-cell-right table-cell">
+                    <%= image_tag('presented-by-bestride.png', :class => 'img-responsive') %>
+                  </div>
+                </div>
+              </div>
+  
+              <%= yield %>
+
+            </div>
+            <div class="col-md-4">
+
+              <iframe src="http://bestride.com/car-talk" width="308" height="362"></iframe>
+
+              <%= image_tag(lorem.image('616x600', :text => 'Ad Unit'), :class => 'img-responsive', :style => 'margin: 10px 0 0;') %>
+              <%= image_tag(lorem.image('616x600', :text => 'Ad Unit'), :class => 'img-responsive', :style => 'margin: 20px 0 0;') %>
+              <%= image_tag(lorem.image('616x600', :text => 'Ad Unit'), :class => 'img-responsive', :style => 'margin: 20px 0 0;') %>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- #main-section -->
+    </div>
+    
+    <div id="site-footer">
+    </div>
+
+    <%= yield_content :script %>
+
+  </body>
+</html>

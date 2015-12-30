@@ -1,0 +1,235 @@
+
+@import 
+  "_partials/mixins",
+  "_partials/global",
+  "_partials/bootstrap_grid";
+
+$burgundy: #bd170f;
+$red: #D0161B;
+$light_gray: #f1f1f1;
+$rule_gray: #ccc;
+$yellow: #fc0;
+$blue: rgb(77,136,219);
+
+
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+#top {
+  height: 167px;
+  border-top: 7px solid $yellow;
+  background-color: $red;
+}
+
+#nav {
+  height: 48px;
+  background-color: $rule_gray;
+}
+
+#breadcrumbs {
+  height: 40px;
+  background-color: $light_gray;
+}
+
+#main-section {
+  padding: 10px 0 30px;
+}
+
+#site-footer {
+  height: 158px;
+  border-top: 5px solid $yellow;
+  background-color: $red;
+}
+
+
+
+/* ==========================================================================
+   Owner Reviews
+   ========================================================================== */
+
+
+.page-header {
+  margin: 10px 0 40px;
+  border-top: 1px solid $rule_gray;
+  border-bottom: 1px solid $rule_gray;
+  padding: 15px 0;
+  position: relative;
+  &:after {
+    content: "";
+    direction: block;
+    width: 1px;
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 50%;
+    background-color: $rule_gray;
+  }
+}
+
+.table-row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.page-header-inner-cell {
+  width: 50%;
+  vertical-align: middle;
+}
+
+.page-header-inner-cell-left {
+  padding-right: 15px;
+  text-align: left;
+}
+
+.page-header-inner-cell-right {
+  padding-left: 25px;
+  text-align: right;
+}
+
+.page-header-heading {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  color: $burgundy;
+  margin-bottom: 3px;
+}
+
+.page-section-heading {
+  margin-bottom: 10px;
+  font: 500 18px 'helvetica neue', sans-serif;
+}
+
+.form-step-indicator {
+  position: absolute;
+  top: -34px;
+  right: 0;
+  z-index: 2;
+  font: italic 300 13px/1 georgia, serif;
+  color: #777;
+}
+
+.form-element {
+  + .form-element {
+    margin-top: 10px;
+  }
+  select, textarea {
+    width: 100%;
+    height: 38px;
+    font: 300 18px 'helvetica neue', sans-serif;
+    color: #aaa;
+    background-color: #fff;
+  }
+  textarea {
+    height: 142px;
+  }
+}
+
+.form-element-instructions {
+  margin: 0 0 20px;
+  font: 300 12px/1.3 verdana, sans-serif;
+  color: #777;
+}
+
+.form-cta {
+  margin: 20px 0 0;
+}
+
+.form-cta-right {
+  text-align: right;
+}
+
+.form-cta-button {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 16px 30px 16px 15px;
+  color: #fff;
+  font-size: 16px;
+  text-align: left;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  + .form-cta-button {
+    margin-top: 10px;
+  }
+  &:after {
+    content: "\f105";
+    min-height: 1em;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    z-index: 2;
+    margin-top: -0.5em;
+    font: normal normal 16px/1 FontAwesome;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+  .form-cta-right & {
+    width: auto;
+  }
+}
+
+.form-cta-button-read, .form-cta-button-next {
+  background-color: $burgundy;
+  &:hover, &:focus {
+    background-color: darken($burgundy, 10%);
+  }
+}
+
+.form-cta-button-take {
+  background-color: $blue;
+  &:hover, &:focus {
+    background-color: darken($blue, 10%);
+  }
+}
+
+.form-cta-button-back {
+  padding: 16px 15px 16px 30px;
+  background-color: $rule_gray;
+  text-align: right;
+  color: #777;
+  &:hover, &:focus {
+    background-color: darken($rule_gray, 10%);
+  } 
+  &:after {
+    content: "\f104";
+    left: 15px;
+    right: auto;
+  }
+}
+
+
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+
+.img-responsive {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.highlight-box {
+  border-radius: 3px;
+  padding: 40px;
+  background-color: $light_gray;
+}
+
+.highlight-box-relative {
+  position: relative;
+}
+
