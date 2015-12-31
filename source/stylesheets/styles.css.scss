@@ -10,6 +10,9 @@ $light_gray: #f1f1f1;
 $rule_gray: #ccc;
 $yellow: #fc0;
 $blue: rgb(77,136,219);
+$light_blue: rgb(209,239,253);
+$light_red: rgb(255,225,228);
+$light_green: rgb(222,240,223);
 
 
 
@@ -48,12 +51,12 @@ $blue: rgb(77,136,219);
 
 
 /* ==========================================================================
-   Owner Reviews
+   Landing
    ========================================================================== */
 
 
 .page-header {
-  margin: 10px 0 40px;
+  margin: 10px 0;
   border-top: 1px solid $rule_gray;
   border-bottom: 1px solid $rule_gray;
   padding: 15px 0;
@@ -68,16 +71,6 @@ $blue: rgb(77,136,219);
     left: 50%;
     background-color: $rule_gray;
   }
-}
-
-.table-row {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-}
-
-.table-cell {
-  display: table-cell;
 }
 
 .page-header-inner-cell {
@@ -110,6 +103,16 @@ $blue: rgb(77,136,219);
 .page-section-heading {
   margin-bottom: 10px;
   font: 500 18px 'helvetica neue', sans-serif;
+}
+
+
+/* ==========================================================================
+   Survey
+   ========================================================================== */
+
+
+.owner-review-form {
+  margin-top: 30px;
 }
 
 .form-step-indicator {
@@ -216,6 +219,145 @@ $blue: rgb(77,136,219);
 }
 
 
+/* ==========================================================================
+   Survey
+   ========================================================================== */
+
+
+.review-header {
+  margin: 0 0 30px;
+  padding: 20px 0 40px;
+  border-bottom: 1px solid $rule_gray;
+  a {
+    color: $blue;
+  }
+}
+
+.review-header-heading {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.review-header-year {
+  font-size: 16px;
+  color: #777;
+}
+
+.review-header-back {
+  text-align: right;
+}
+
+.review-header-questions {
+  margin: 0;
+  padding: 50px 10px 10px;
+  border: none;
+  color: #777;
+  font: normal 16px/1.2 'helvetica neue', sans-serif;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.review-header-questions-bar {
+  padding: 3px;
+  box-shadow: inset 1px 1px 4px rgba(0,0,0, 0.1);
+  background-color: $light_gray;
+}
+
+.review-header-questions-bar-fill {
+  height: 16px;
+  background-color: $yellow;
+}
+
+.review-header-question-rating {
+  margin: 15px 0;
+  font: italic 300 15px georgia, serif;
+  color: #777;
+  text-align: center;
+  strong {
+    display: inline-block;
+    padding: 0 5px;
+    font: normal 600 21px verdana, sans-serif;
+    color: #000;
+  }
+}
+
+.review-header-question-rating-average {
+  margin: 7px 0 0;
+  font: 300 11px/1 'arial narrow', arial, sans-serif;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.review-body-key {
+  text-align: center;
+}
+
+.review-body-key-item {
+  position: relative;
+  display: inline-block;
+  padding: 22px 0 30px;
+  text-transform: uppercase;
+  &:after {
+    content: "\f111";
+    display: inline-block;
+    min-height: 1em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    margin-left: -0.5em;
+    font: normal normal 16px/1 FontAwesome;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+  + .review-body-key-item {
+    margin-left: 30px;
+  }
+}
+
+.review-body-key-item-best {
+  &:after {
+    color: $light_green;
+  }
+}
+
+.review-body-key-item-worst {
+  &:after {
+    color: $light_red;
+  }
+}
+
+.review-body-key-item-general {
+  &:after {
+    color: $light_blue;
+  }
+}
+
+.review-comment {
+  padding: 10px;
+  font: italic 300 13px/1.3 georgia, serif;
+  + .review-comment {
+    margin-top: 10px;
+  }
+}
+
+.review-comment-best {
+  color: darken($light_green, 55%);
+  background-color: $light_green;
+}
+
+.review-comment-worst {
+  color: darken($light_red, 55%);
+  background-color: $light_red;
+}
+
+.review-comment-general {
+  color: darken($light_blue, 55%);
+  background-color: $light_blue;
+}
+
+
+
 
 /* ==========================================================================
    Utilities
@@ -237,4 +379,17 @@ $blue: rgb(77,136,219);
 .highlight-box-relative {
   position: relative;
 }
+
+
+.table-row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+
 

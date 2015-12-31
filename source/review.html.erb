@@ -1,0 +1,105 @@
+---
+title: Owner Reviews
+---
+
+
+
+
+        <div class="review-header">
+          <div class="review-header-section">
+            <div class="row">
+              <div class="col-md-9">
+                <h2 class="review-header-heading">
+                  Subaru Outback
+                </h2>
+                <div class="review-header-year">
+                  2002
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="review-header-back">
+                  <%= link_to('Review another car  >', '/') %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-header-section">
+            <div class="row">
+              <div class="col-md-4">
+                <h3 class="review-header-questions">
+                  How much do you like this car?
+                </h3>
+                <div class="review-header-questions-bar">
+                  <div class="review-header-questions-bar-fill" style="width: 64%;">
+                  </div>
+                </div>
+                <div class="review-header-question-rating">
+                  <strong>6.4</strong> out of <strong>10</strong>
+                  <div class="review-header-question-rating-average">
+                    Average score: 7.4
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3 class="review-header-questions">
+                  Would you buy it again?
+                </h3>
+                <div class="review-header-questions-bar">
+                  <div class="review-header-questions-bar-fill" style="width: 72%;">
+                  </div>
+                </div>
+                <div class="review-header-question-rating">
+                  <strong>7.2</strong> out of <strong>10</strong>
+                  <div class="review-header-question-rating-average">
+                    Average score: 7.4
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h3 class="review-header-questions">
+                  Would you recommend it to a friend?
+                </h3>
+                <div class="review-header-questions-bar">
+                  <div class="review-header-questions-bar-fill" style="width: 88%;">
+                  </div>
+                </div>
+                <div class="review-header-question-rating">
+                  <strong>8.8</strong> out of <strong>10</strong>
+                  <div class="review-header-question-rating-average">
+                    Average score: 7.4
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="review-body">
+
+          <div class="review-body-key">
+            <span class="review-body-key-item review-body-key-item-best">
+              Best
+            </span>
+            <span class="review-body-key-item review-body-key-item-worst">
+              Worst
+            </span>
+            <span class="review-body-key-item review-body-key-item-general">
+              General
+            </span>
+          </div>
+
+          <div class="row">
+            <% 12.times.each_slice(4) do |column| %>
+              <div class="col-md-4">
+                <% column.each do |comment| %>
+                  <div class="review-comment review-comment-<%= ['best', 'worst', 'general'].sample %>">
+                    <%= lorem.sentences(2) %>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+
+
+        </div>
