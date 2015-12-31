@@ -39,7 +39,7 @@ $light_green: rgb(222,240,223);
 
 #main-section {
   min-height: 1031px;
-  padding: 10px 0 30px;
+  padding: 10px 0 60px;
 }
 
 #site-footer {
@@ -111,7 +111,7 @@ $light_green: rgb(222,240,223);
    ========================================================================== */
 
 
-.owner-review-form {
+.owner-review-leading {
   margin-top: 30px;
 }
 
@@ -282,9 +282,8 @@ $light_green: rgb(222,240,223);
 }
 
 .review-header-question-rating-average {
-  margin: 7px 0 0;
+  margin: 10px 0 0;
   font: 300 11px/1 'arial narrow', arial, sans-serif;
-  color: #aaa;
   text-transform: uppercase;
 }
 
