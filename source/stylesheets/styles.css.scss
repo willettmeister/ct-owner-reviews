@@ -8,6 +8,7 @@ $burgundy: #bd170f;
 $red: #D0161B;
 $light_gray: #f1f1f1;
 $rule_gray: #ccc;
+$green: #59a002;
 $yellow: #fc0;
 $blue: rgb(77,136,219);
 $light_blue: rgb(209,239,253);
@@ -368,8 +369,17 @@ $light_purple: #ede7f6;
 
 .review-comment-filter-all {
   &:after {
-    content: "\f10c";
     color: $rule_gray;
+  }
+  &:hover, &:focus {
+    &:after {
+      color: #000;
+    }
+  }
+  &.current {
+    &:after {
+      color: #000;
+    }
   }
 }
 
@@ -377,17 +387,47 @@ $light_purple: #ede7f6;
   &:after {
     color: $light_green;
   }
+  &:hover, &:focus {
+    &:after {
+      color: $green;
+    }
+  }
+  &.current {
+    &:after {
+      color: $green;
+    }
+  }
 }
 
 .review-comment-filter-worst {
   &:after {
     color: $light_red;
   }
+  &:hover, &:focus {
+    &:after {
+      color: $red;
+    }
+  }
+  &.current {
+    &:after {
+      color: $red;
+    }
+  }
 }
 
 .review-comment-filter-general {
   &:after {
     color: $light_blue;
+  }
+  &:hover, &:focus {
+    &:after {
+      color: $blue;
+    }
+  }
+  &.current {
+    &:after {
+      color: $blue;
+    }
   }
 }
 
