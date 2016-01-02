@@ -102,27 +102,32 @@ title: Owner Reviews
 
 
         <div class="review-body">
+          <h2 class="page-section-heading page-section-heading-centered">
+            Filter review comments by:
+          </h2>
 
-          <div class="review-body-key">
-            <span class="review-body-key-item review-body-key-item-best">
+          <div class="review-comment-nav">
+            <span class="review-comment-filter review-comment-filter-all current" data-filter="*">
+              All
+            </span>
+            <span class="review-comment-filter review-comment-filter-best" data-filter=".review-comment-best">
               Best
             </span>
-            <span class="review-body-key-item review-body-key-item-worst">
+            <span class="review-comment-filter review-comment-filter-worst" data-filter=".review-comment-worst">
               Worst
             </span>
-            <span class="review-body-key-item review-body-key-item-general">
+            <span class="review-comment-filter review-comment-filter-general" data-filter=".review-comment-general">
               General
             </span>
           </div>
 
-          <div class="row">
-            <% 12.times.each_slice(4) do |column| %>
-              <div class="col-md-4">
-                <% column.each do |comment| %>
-                  <div class="review-comment review-comment-<%= ['best', 'worst', 'general'].sample %>">
-                    <%= lorem.sentences(2) %>
-                  </div>
-                <% end %>
+          <div class="review-comments">
+            <div class="review-comment-sizer"></div>
+            <% 20.times.each do |comment| %>
+              <div class="review-comment review-comment-<%= ['best', 'worst', 'general'].sample %>">
+                <div class="review-comment-interior">
+                  <%= lorem.sentences(2) %>
+                </div>
               </div>
             <% end %>
           </div>

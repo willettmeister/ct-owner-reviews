@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="http://cartalk.local:8888/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= yield_content :style %>
-    <%#= javascript_include_tag  "scripts" %>
+    <%= javascript_include_tag "//code.jquery.com/jquery-2.1.4.min.js", "all" %>
     <%= favicon_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
   </head>
   

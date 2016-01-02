@@ -13,6 +13,7 @@ $blue: rgb(77,136,219);
 $light_blue: rgb(209,239,253);
 $light_red: rgb(255,225,228);
 $light_green: rgb(222,240,223);
+$light_purple: #ede7f6;
 
 
 
@@ -115,6 +116,10 @@ $light_green: rgb(222,240,223);
 .page-section-heading {
   margin-bottom: 10px;
   font: 500 18px 'helvetica neue', sans-serif;
+}
+
+.page-section-heading-centered {
+  text-align: center;
 }
 
 
@@ -325,15 +330,17 @@ $light_green: rgb(222,240,223);
   }
 }
 
-.review-body-key {
+.review-comment-nav {
+  padding: 10px 0 20px;
   text-align: center;
 }
 
-.review-body-key-item {
+.review-comment-filter {
   position: relative;
   display: inline-block;
   padding: 22px 0 30px;
   text-transform: uppercase;
+  color: #aaa;
   &:after {
     content: "\f111";
     display: inline-block;
@@ -347,50 +354,84 @@ $light_green: rgb(222,240,223);
     display: inline-block;
     text-decoration: inherit;
   }
-  + .review-body-key-item {
+  + .review-comment-filter {
     margin-left: 30px;
+  }
+  &:hover, &:focus {
+    cursor: pointer;
+    color: #000;
+  }
+  &.current {
+    color: #000;
   }
 }
 
-.review-body-key-item-best {
+.review-comment-filter-all {
+  &:after {
+    content: "\f10c";
+    color: $rule_gray;
+  }
+}
+
+.review-comment-filter-best {
   &:after {
     color: $light_green;
   }
 }
 
-.review-body-key-item-worst {
+.review-comment-filter-worst {
   &:after {
     color: $light_red;
   }
 }
 
-.review-body-key-item-general {
+.review-comment-filter-general {
   &:after {
     color: $light_blue;
   }
 }
 
-.review-comment {
-  padding: 10px;
-  font: italic 300 13px/1.3 georgia, serif;
-  + .review-comment {
-    margin-top: 10px;
+.review-comments, .review-comment, .review-comment-sizer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.review-comments {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.review-comment, .review-comment-sizer {
+  @media screen and (min-width: 600px) and (max-width: 991px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 992px) {
+    width: 33.33333333%;
   }
 }
 
-.review-comment-best {
-  color: darken($light_green, 55%);
-  background-color: $light_green;
+.review-comment {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font: italic 300 13px/1.3 georgia, serif;
 }
 
-.review-comment-worst {
-  color: darken($light_red, 55%);
-  background-color: $light_red;
-}
-
-.review-comment-general {
-  color: darken($light_blue, 55%);
-  background-color: $light_blue;
+.review-comment-interior {
+  padding: 10px;
+  .review-comment-best & {
+    color: darken($light_green, 55%);
+    background-color: $light_green;
+  }
+  .review-comment-worst & {
+    color: darken($light_red, 55%);
+    background-color: $light_red;
+  }
+  .review-comment-general & {
+    color: darken($light_blue, 55%);
+    background-color: $light_blue;
+  }
 }
 
 
