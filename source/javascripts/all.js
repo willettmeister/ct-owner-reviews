@@ -10,11 +10,6 @@
           columnWidth: '.review-comment-sizer'
         }
       });
-      // layout Isotope after each image loads
-      $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
-      });  
-
 
       $('.review-comment-nav').on( 'click', '.review-comment-filter', function() {
         var filterValue = $(this).attr('data-filter');
