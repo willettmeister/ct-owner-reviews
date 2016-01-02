@@ -245,7 +245,7 @@ $light_purple: #ede7f6;
 .review-header {
   margin: 0 0 30px;
   padding: 20px 0 40px;
-  border-bottom: 1px solid $rule_gray;
+  border-bottom: 1px dashed $rule_gray;
   a {
     color: $blue;
   }
