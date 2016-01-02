@@ -2,7 +2,28 @@
 title: Owner Reviews
 ---
 
+<% content_for :style do %>
+  <style>
 
+    .review-header-questions-bar-fill {
+      height: 16px;
+      background-color: $yellow;
+      -webkit-animation: bar-fill 2s;
+      -moz-animation: bar-fill 2s;
+      animation: bar-fill 2s;
+    }
+
+    @-webkit-keyframes bar-fill {
+       0% { width: 0; }
+    }
+    @-moz-keyframes bar-fill {
+       0% { width: 0; }
+    }
+    keyframes bar-fill {
+       0% { width: 0; }
+    }
+  </style>
+<% end %>
 
 
         <div class="review-header">

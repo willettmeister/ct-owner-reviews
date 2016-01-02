@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag "styles" %>
     <link rel="shortcut icon" href="http://cartalk.local:8888/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <%= yield_content :style %>
     <%#= javascript_include_tag  "scripts" %>
     <%= favicon_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
   </head>
