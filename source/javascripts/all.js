@@ -1,5 +1,4 @@
 //= require "isotope.min"
-//= require "imagesloaded.pkgd.min"
 
 
     $(document).ready( function() {
