@@ -1,0 +1,64 @@
+---
+title: Owner Reviews
+---
+
+
+        <div class="review-header review-header-noborder">
+          <div class="review-header-section">
+            <div class="row">
+              <div class="col-md-9">
+                <h2 class="review-header-heading">
+                  Subaru Outback
+                </h2>
+                <div class="review-header-year">
+                  All Years
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="review-header-back">
+                  <%= link_to('Review another car  >', '/') %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-header-section">
+            <table class="review-table">
+              <thead>
+                <tr>
+                  <th class="review-table-year">
+                    Year
+                  </th>
+                  <th class="review-table-like">
+                    How much do you like this car?
+                  </th>
+                  <th class="review-table-buyagain">
+                    Would you buy it again?
+                  </th>
+                  <th class="review-table-recommend">
+                    Would you recommend it to a friend?
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <% 25.times.each_with_index do |i| %>
+                  <tr>
+                    <td class="review-table-year">
+                      <%= (2017 - (i + 1)) %>
+                    </td>
+                    <td class="review-table-like">
+                      <%= rand(0.0...10.0).round(1) %>
+                    </td>
+                    <td class="review-table-buyagain">
+                      <%= rand(0.0...10.0).round(1) %>
+                    </td>
+                    <td class="review-table-recommend">
+                      <%= rand(0.0...10.0).round(1) %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+

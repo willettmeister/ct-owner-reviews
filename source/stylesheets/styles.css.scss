@@ -251,6 +251,10 @@ $light_purple: #ede7f6;
   }
 }
 
+.review-header-noborder {
+  border-bottom: none;
+}
+
 .review-header-heading {
   font-size: 21px;
   text-transform: uppercase;
@@ -328,6 +332,43 @@ $light_purple: #ede7f6;
     font: normal normal 16px/1 FontAwesome !important;
     display: inline-block;
     text-decoration: inherit;
+  }
+}
+
+.review-table {
+  margin-top: 50px;
+  border-collapse: separate;
+  border-spacing: 1px 0;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  th, td {
+    padding: 10px;
+    text-align: center;
+    &:first-child {
+      text-align: left;
+    }
+  }
+  td {
+    &:first-child {
+      font-weight: 300;
+    }
+  }
+  thead {
+    tr {
+      background-color: $burgundy;
+      color: #fff;
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: #f1f1f1;
+      }
+      &:hover {
+        background-color: $light_red;
+      }
+    }
   }
 }
 
