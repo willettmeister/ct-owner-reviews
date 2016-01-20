@@ -76,16 +76,16 @@ $light_purple: #ede7f6;
   border-bottom: 1px solid $rule_gray;
   padding: 15px 0;
   position: relative;
-  &:after {
-    content: "";
-    direction: block;
-    width: 1px;
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 50%;
-    background-color: $rule_gray;
-  }
+  // &:after {
+  //   content: "";
+  //   direction: block;
+  //   width: 1px;
+  //   position: absolute;
+  //   top: 15px;
+  //   bottom: 15px;
+  //   left: 50%;
+  //   background-color: $rule_gray;
+  // }
 }
 
 .page-header-inner-cell {
