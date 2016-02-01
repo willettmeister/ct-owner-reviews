@@ -91,13 +91,13 @@ $light_purple: #ede7f6;
 }
 
 .sidebar-unit-header-bar {
-  padding: 3px;
+  padding: 2px;
   box-shadow: inset 1px 1px 4px rgba(0,0,0, 0.1);
   background-color: $light_gray;
 }
 
 .sidebar-unit-header-bar-fill {
-  height: 10px;
+  height: 5px;
   background-color: $yellow;
   -webkit-animation: bar-fill 2s;
   -moz-animation: bar-fill 2s;
@@ -252,7 +252,6 @@ $light_purple: #ede7f6;
 }
 
 .form-cta-button-back {
-  padding: 16px 15px 16px 30px;
   background-color: $rule_gray;
   text-align: right;
   color: #777;
