@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="http://cartalk.local:8888/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= yield_content :style %>
-    <%= javascript_include_tag "//code.jquery.com/jquery-2.1.4.min.js", "all" %>
+    <%= javascript_include_tag "//code.jquery.com/jquery-2.1.4.min.js", "isotope.min", "all" %>
     <%= favicon_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
   </head>
   
@@ -47,6 +47,54 @@
 
             </div>
             <div class="table-cell main-sidebar">
+              <div class="sidebar-unit sidebar-unit-owner-reviews">
+                <form>
+                  <div class="sidebar-unit-header">
+                    <h3 class="sidebar-unit-header-title">
+                      See What Others Are Saying about Your Car
+                    </h3>
+                    <div class="sidebar-unit-header-bar">
+                      <div class="sidebar-unit-header-bar-fill" style="width: 80%;">
+                      </div>
+                    </div>
+                  </div>
+                  <fieldset class="form-field">
+                    <label>
+                      Make
+                    </label>
+                    <select>
+                      <option>
+                        Subaru
+                      </option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-field">
+                    <label>
+                      Model
+                    </label>
+                    <select>
+                      <option>
+                        Outback
+                      </option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-field">
+                    <label>
+                      Year
+                    </label>
+                    <select>
+                      <option>
+                        2002
+                      </option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-cta form-cta-right">
+                    <a href="/survey2/" class="form-cta-button form-cta-button-read">
+                      Submit
+                    </a>
+                  </fieldset>
+                </form>
+              </div>
             </div>
           </div>
 

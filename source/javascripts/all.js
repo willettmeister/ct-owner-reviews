@@ -1,4 +1,3 @@
-//= require "isotope.min"
 
 
     $(document).ready( function() {

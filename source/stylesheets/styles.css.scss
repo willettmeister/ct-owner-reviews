@@ -51,11 +51,63 @@ $light_purple: #ede7f6;
 .main-content {
   width: 650px;
   padding-right: 40px;
+  vertical-align: top;
 }
 
 .main-sidebar {
   width: 310px;
+  img {
+    margin-top: 10px;
+  }
+}
+
+.sidebar-unit {
+  padding: 15px;
+}
+
+.sidebar-unit-owner-reviews {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  select {
+    width: 100%;
+    height: 38px;
+    font: 300 18px 'helvetica neue', sans-serif;
+    color: #aaa;
+    background-color: #efefef;
+  }
+  label {
+    font-weight: 600;
+  }
+}
+
+.sidebar-unit-header {
+  margin: 0 0 20px;
+}
+
+.sidebar-unit-header-title {
+  padding: 0 0 5px;
+  color: $burgundy;
+  border-bottom: none;
+}
+
+.sidebar-unit-header-bar {
+  padding: 3px;
+  box-shadow: inset 1px 1px 4px rgba(0,0,0, 0.1);
   background-color: $light_gray;
+}
+
+.sidebar-unit-header-bar-fill {
+  height: 10px;
+  background-color: $yellow;
+  -webkit-animation: bar-fill 2s;
+  -moz-animation: bar-fill 2s;
+  animation: bar-fill 2s;
+}
+
+.form-field {
+  + .form-field {
+    margin-top: 10px;
+  }
 }
 
 #site-footer {
@@ -76,16 +128,6 @@ $light_purple: #ede7f6;
   border-bottom: 1px solid $rule_gray;
   padding: 15px 0;
   position: relative;
-  // &:after {
-  //   content: "";
-  //   direction: block;
-  //   width: 1px;
-  //   position: absolute;
-  //   top: 15px;
-  //   bottom: 15px;
-  //   left: 50%;
-  //   background-color: $rule_gray;
-  // }
 }
 
 .page-header-inner-cell {
@@ -174,15 +216,14 @@ $light_purple: #ede7f6;
 }
 
 .form-cta-button {
-  position: relative;
   display: inline-block;
   width: 100%;
   border: none;
   border-radius: 3px;
-  padding: 16px 30px 16px 15px;
+  padding: 16px;
   color: #fff;
   font-size: 15px;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   &:hover, &:focus {
     text-decoration: none;
@@ -190,18 +231,6 @@ $light_purple: #ede7f6;
   }
   + .form-cta-button {
     margin-top: 10px;
-  }
-  &:after {
-    content: "\f105";
-    min-height: 1em;
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    z-index: 2;
-    margin-top: -0.5em;
-    font: normal normal 16px/1 FontAwesome;
-    display: inline-block;
-    text-decoration: inherit;
   }
   .form-cta-right & {
     width: auto;
@@ -289,6 +318,9 @@ $light_purple: #ede7f6;
 .review-header-questions-bar-fill {
   height: 16px;
   background-color: $yellow;
+  -webkit-animation: bar-fill 2s;
+  -moz-animation: bar-fill 2s;
+  animation: bar-fill 2s;
 }
 
 .review-header-question-rating {
@@ -549,6 +581,21 @@ $light_purple: #ede7f6;
 
 .table-cell {
   display: table-cell;
+}
+
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@-webkit-keyframes bar-fill {
+   0% { width: 0; }
+}
+@-moz-keyframes bar-fill {
+   0% { width: 0; }
+}
+@keyframes bar-fill {
+   0% { width: 0; }
 }
 
 
