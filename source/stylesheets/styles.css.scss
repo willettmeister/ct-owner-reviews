@@ -259,11 +259,6 @@ $light_purple: #ede7f6;
   &:hover, &:focus {
     background-color: darken($rule_gray, 10%);
   } 
-  &:after {
-    content: "\f104";
-    left: 15px;
-    right: auto;
-  }
 }
 
 
