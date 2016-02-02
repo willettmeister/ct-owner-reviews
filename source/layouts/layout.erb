@@ -6,9 +6,8 @@
   <head profile="http://www.w3.org/1999/xhtml/vocab">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><%= "Car Talk | " + current_page.data.title || "Car Talk" %></title>
-    <%= stylesheet_link_tag "styles" %>
+    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", "styles" %>
     <link rel="shortcut icon" href="http://cartalk.local:8888/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= yield_content :style %>
     <%= javascript_include_tag "//code.jquery.com/jquery-2.1.4.min.js", "isotope.min", "all" %>
     <%= favicon_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
@@ -35,11 +34,6 @@
                       <%= link_to('Owner Reviews', '/') %>
                     </h1>
                   </div>
-<% if false %>
-                  <div class="page-header-inner-cell page-header-inner-cell-right table-cell">
-                    <%= image_tag('presented-by-bestride.png', :class => 'img-responsive') %>
-                  </div>
-<% end %>
                 </div>
               </div>
   
@@ -49,50 +43,57 @@
             <div class="table-cell main-sidebar">
               <div class="sidebar-unit sidebar-unit-owner-reviews">
                 <form>
-                  <div class="sidebar-unit-header">
+                  <div class="sidebar-unit-header sidebar-unit-interior">
                     <h3 class="sidebar-unit-header-title">
-                      How does your car compare?
+                      <span class="sidebar-unit-header-title-preamble">
+                        See what others say about
+                      </span>
+                      <span class="sidebar-unit-header-title-kicker">
+                        your car
+                      </span>
                     </h3>
                     <div class="sidebar-unit-header-bar">
-                      <div class="sidebar-unit-header-bar-fill" style="width: <%= rand(60...80) %>%;">
+                      <div class="sidebar-unit-header-bar-fill" style="width: <%= rand(75...90) %>%;">
                       </div>
                     </div>
                   </div>
-                  <fieldset class="form-field">
-                    <label>
-                      Make
-                    </label>
-                    <select>
-                      <option>
-                        Subaru
-                      </option>
-                    </select>
-                  </fieldset>
-                  <fieldset class="form-field">
-                    <label>
-                      Model
-                    </label>
-                    <select>
-                      <option>
-                        Outback
-                      </option>
-                    </select>
-                  </fieldset>
-                  <fieldset class="form-field">
-                    <label>
-                      Year
-                    </label>
-                    <select>
-                      <option>
-                        2002
-                      </option>
-                    </select>
-                  </fieldset>
-                  <fieldset class="form-cta form-cta-right">
-                    <a href="/survey2/" class="form-cta-button form-cta-button-read">
-                      Submit
-                    </a>
-                  </fieldset>
+                  <div class="sidebar-unit-body sidebar-unit-interior">
+                    <fieldset class="form-field">
+                      <label>
+                        Make
+                      </label>
+                      <select>
+                        <option>
+                          Subaru
+                        </option>
+                      </select>
+                    </fieldset>
+                    <fieldset class="form-field">
+                      <label>
+                        Model
+                      </label>
+                      <select>
+                        <option>
+                          Outback
+                        </option>
+                      </select>
+                    </fieldset>
+                    <fieldset class="form-field">
+                      <label>
+                        Year
+                      </label>
+                      <select>
+                        <option>
+                          2002
+                        </option>
+                      </select>
+                    </fieldset>
+                    <fieldset class="form-cta form-cta-right">
+                      <a href="/survey2/" class="form-cta-button form-cta-button-read">
+                        Submit
+                      </a>
+                    </fieldset>
+                  </div>
                 </form>
               </div>
             </div>

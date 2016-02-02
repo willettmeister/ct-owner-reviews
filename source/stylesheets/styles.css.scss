@@ -61,12 +61,11 @@ $light_purple: #ede7f6;
   }
 }
 
-.sidebar-unit {
+.sidebar-unit-interior {
   padding: 15px;
 }
 
 .sidebar-unit-owner-reviews {
-  border: 1px solid #ccc;
   border-radius: 3px;
   select {
     width: 100%;
@@ -78,30 +77,51 @@ $light_purple: #ede7f6;
   label {
     font-weight: 600;
   }
-}
+  .sidebar-unit-body {
+    border: 1px solid #ccc;
+    border-radius: 0 0 3px 3px;
+    background: transparent url('../images/sidebar-grapic-owner-review-widget.png') no-repeat left bottom;
+    background-size: auto 70px;
+  }
+  .sidebar-unit-header {
+    border-radius: 3px 3px 0 0;
+    background-color: $burgundy;
+  }
 
-.sidebar-unit-header {
-  margin: 0 0 20px;
-}
+  .sidebar-unit-header-title {
+    border-bottom: none;
+    padding: 0 0 5px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #fff;
+  }
 
-.sidebar-unit-header-title {
-  padding: 0 0 5px;
-  color: $burgundy;
-  border-bottom: none;
-}
+  .sidebar-unit-header-title-preamble {
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
 
-.sidebar-unit-header-bar {
-  padding: 2px;
-  box-shadow: inset 1px 1px 4px rgba(0,0,0, 0.1);
-  background-color: $light_gray;
-}
+  .sidebar-unit-header-title-kicker {
+    display: block;
+    text-transform: capitalize;
+  }
 
-.sidebar-unit-header-bar-fill {
-  height: 5px;
-  background-color: $yellow;
-  -webkit-animation: bar-fill 2s;
-  -moz-animation: bar-fill 2s;
-  animation: bar-fill 2s;
+  .sidebar-unit-header-bar {
+    padding: 2px;
+    box-shadow: inset 1px 1px 4px rgba(0,0,0, 0.1);
+    background-color: $light_gray;
+  }
+
+  .sidebar-unit-header-bar-fill {
+    height: 5px;
+    background-color: $yellow;
+    -webkit-animation: bar-fill 2s;
+    -moz-animation: bar-fill 2s;
+    animation: bar-fill 2s;
+  }
 }
 
 .form-field {
